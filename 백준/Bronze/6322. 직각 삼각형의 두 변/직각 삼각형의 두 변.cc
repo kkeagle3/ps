@@ -10,37 +10,31 @@ int main()
         int a,b,c;
         double result;
         cin >> a >> b >>c;
-        if(a==0 && b==0 && c==0)
+        if(a==0)
             break;
-        else{
-            cout << fixed << setprecision(3);
+        cout << fixed << setprecision(3);
+        cout << "Triangle #" << n << "\n";
 
-            if(c==-1){
-                result=a*a+b*b;
-                cout << "Triangle #" << n << "\n";
-                cout << "c = " << sqrt(result) << "\n";
-            }
-            else if(a==-1){
-                if(b>=c){
-                    cout << "Triangle #" << n << "\n";
-                    cout << "Impossible." << "\n";
-                }
-                else{
-                    result=c*c-b*b;
-                    cout << "Triangle #" << n << "\n";
-                    cout << "a = " << sqrt(result) << "\n";
-                }
+        if(c==-1){
+            result=a*a+b*b;
+            cout << "c = " << sqrt(result) << "\n";
+        }
+        else if(a==-1){
+            if(b>=c){
+                cout << "Impossible." << "\n";
             }
             else{
-                if(a>=c){
-                    cout << "Triangle #" << n << "\n";
-                    cout << "Impossible." << "\n";
-                }
-                else{
-                    result=c*c-a*a;
-                    cout << "Triangle #" << n << "\n";
-                    cout << "b = " << sqrt(result) << "\n";
-                }
+                result=c*c-b*b;
+                cout << "a = " << sqrt(result) << "\n";
+            }
+        }
+        else{
+            if(a>=c){
+                cout << "Impossible." << "\n";
+            }
+            else{
+                result=c*c-a*a;
+                cout << "b = " << sqrt(result) << "\n";
             }
         }
         n++;
