@@ -1,25 +1,19 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
 using namespace std;
 
 int main()
 {
-    int da;
-    vector<int> v;
+    int asc=0,des=0;
+    int input[8];
     for(int i=0;i<8;i++){
-        cin >> da;
-        v.push_back(da);
+        cin >> input[i];
+        if(i>0){
+            if(input[i]>input[i-1]) asc++;
+            else if(input[i]<input[i-1]) des++;
+        }
     }
-    vector<int> v2=v;
-    vector<int> v3=v;
-    sort(v2.begin(),v2.end());
-    sort(v3.rbegin(),v3.rend());
-    if(v==v2)
-        cout << "ascending";
-    else if(v==v3)
-        cout << "descending";
-    else
-        cout << "mixed";
-    
+    if(asc==7) cout << "ascending";
+    else if(des==7) cout << "descending";
+    else    cout << "mixed"; 
+    return 0;  
 }
