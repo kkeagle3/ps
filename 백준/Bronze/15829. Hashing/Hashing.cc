@@ -3,8 +3,8 @@ using namespace std;
 
 int main()
 {
-    int l,r=1;
-    long long int sum=0;
+    int l;
+    long long int sum=0,r=1;
     cin >> l;
     string line;
     cin >> line;
