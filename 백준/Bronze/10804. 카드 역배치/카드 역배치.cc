@@ -9,11 +9,7 @@ int main()
     for(int i=0;i<10;i++){
         int a,b;
         cin >> a >> b;
-        for(int j=a-1;j<a-1+(b-a+1)/2;j++){
-            int temp=arr[j];
-            arr[j]=arr[a+b-2-j];
-            arr[a+b-2-j]=temp;
-        }
+        reverse(arr+a-1,arr+b);
     }
     for(int i:arr)  cout << i << " ";
 }
